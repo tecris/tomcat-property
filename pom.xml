@@ -4,7 +4,7 @@
 
   <groupId>org.terra</groupId>
   <artifactId>tomcat.property-replacement</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
   <name>Tomcat property replacement demo </name>
@@ -162,7 +162,7 @@
               <images>
                 <image>
                   <alias>tomcat-pr-db</alias>
-                  <name>casa.docker/mysql:5.7</name>
+                  <name>casadocker/mysql:5.7</name>
                   <run>
                     <namingStrategy>alias</namingStrategy>
                     <env>
@@ -181,9 +181,9 @@
                 </image>
                 <image>
                   <alias>tomcat-pr-web</alias>
-                  <name>casa.docker/tomcat-pr-web:${buildNumber}</name>
+                  <name>casadocker/tomcat-pr-web:${buildNumber}</name>
                   <build>
-                    <from>casa.docker/tomcat-pr:8.0.30</from>
+                    <from>casadocker/tomcat-pr:8.0.30</from>
                     <assembly>
                       <basedir>/usr/local/tomcat</basedir>
                       <descriptor>assembly.xml</descriptor>

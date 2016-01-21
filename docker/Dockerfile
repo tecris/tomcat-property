@@ -1,4 +1,4 @@
-FROM casa.docker/tomcat:8.0.30
+FROM casadocker/tomcat:8.0.30
 
 # Tomcat property replacement
 # https://tomcat.apache.org/tomcat-8.0-doc/config/
