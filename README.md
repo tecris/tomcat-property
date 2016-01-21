@@ -1,5 +1,8 @@
 # Property replacement in tomcat
-Project provided as a working solution deployed with docker & docker compose
+Sample project to demonstrate property replacement in tomcat.
+
+ - Database host, port, username and password are declared in context.xml as properties.
+
 
 Stack
 * java v8
@@ -12,7 +15,4 @@ Stack
 * `# ./prerequisites.sh`
 
 ## Integration tests
-* `# mvn verify -Pcontinuous-delivery`
-
-## Manual test
-* http://127.0.0.1:8080/tomcat-ds/rest/book/test
+* `# mvn clean verify -Pcd -Dmaven.buildNumber.doCheck=false`
