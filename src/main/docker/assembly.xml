@@ -11,4 +11,10 @@
       <outputFileNameMapping>tomcat-pr.war</outputFileNameMapping>
     </dependencySet>
   </dependencySets>
+   <files>
+    <file>
+      <source>src/main/docker/files/setenv.sh</source>
+      <outputDirectory>../bin</outputDirectory>
+    </file>
+  </files>
 </assembly>
