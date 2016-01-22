@@ -10,9 +10,9 @@
   <name>Tomcat property replacement demo </name>
 
   <scm>
-    <url>https://github.com/tecris/tomcat-pr.git</url>
-    <connection>scm:git:git://github.com/tecris/tomcat-pr.git</connection>
-    <developerConnection>scm:git:git@github.com:tecris/tomcat-pr.git</developerConnection>
+    <url>https://github.com/tecris/tomcat-property.git</url>
+    <connection>scm:git:git://github.com/tecris/tomcat-property.git</connection>
+    <developerConnection>scm:git:git@github.com:tecris/tomcat-property.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
   <distributionManagement>
