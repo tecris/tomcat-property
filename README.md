@@ -18,7 +18,7 @@ Stack
 * docker-compose v1.5
 
 ## Prerequisites
-* `# docker run --name nexus --restart=always -d -p 172.17.0.1:8081:8081 casadocker/nexus:2.12.0-01`
+* `$ docker run --name nexus --restart=always -d -p 172.17.0.1:8081:8081 casadocker/nexus:2.12.0-01`
 
 ## Integration tests
-* `# mvn clean verify -Pcd -Dmaven.buildNumber.doCheck=false`
+* `$ mvn clean verify -Pcd -Dmaven.buildNumber.doCheck=false`
