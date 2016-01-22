@@ -1,8 +1,13 @@
 # Property replacement in tomcat
 Sample project to demonstrate property replacement in tomcat.
+
 https://tomcat.apache.org/tomcat-8.0-doc/config/
 
- - Database host, port, username and password are declared in context.xml as properties.
+Properties
+ - database host
+ - database port
+ - database username
+ - database password
 
 
 Stack
