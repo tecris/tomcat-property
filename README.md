@@ -11,6 +11,7 @@ Properties
 
 
 Stack
+* tomcat v8
 * java v8
 * maven v3x
 * docker v1.9
