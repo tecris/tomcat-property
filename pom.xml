@@ -183,7 +183,7 @@
                   <alias>tomcat-pr-web</alias>
                   <name>casadocker/tomcat-pr-web:${buildNumber}</name>
                   <build>
-                    <from>casadocker/tomcat-pr:8.0.30</from>
+                    <from>casadocker/tomcat:8.0.30</from>
                     <assembly>
                       <basedir>/usr/local/tomcat</basedir>
                       <descriptor>assembly.xml</descriptor>
