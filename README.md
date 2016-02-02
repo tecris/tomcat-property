@@ -4,10 +4,13 @@ Sample project to demonstrate property replacement in tomcat.
 https://tomcat.apache.org/tomcat-8.0-doc/config/
 
 Properties
- - database host
- - database port
- - database username
- - database password
+
+| **Property** | **Description** |
+| ------------- | ------------- |
+| db.host | database host / ip address |
+| db.port | database port |
+| db.username | database username |
+| db.password | database password |
 
 
 Stack
