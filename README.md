@@ -2,23 +2,30 @@
 Sample project to demonstrate property replacement in tomcat.
 
 https://tomcat.apache.org/tomcat-8.0-doc/config/
+<hr/>
 
-Properties
- - database host
- - database port
- - database username
- - database password
+#### Stack
+| **Technology** | **Version** |
+| ------------- | ------------- |
+| Tomcat | 8 |
+| Java | 8 |
+| Maven | 3.3 |
+| Docker | 1.9 |
+| Docker Compose | 1.5.2 |
 
+#### Properties
+ - Defined in [context.xml](src/main/webapp/META-INF/context.xml)
+ - Supplied in [setenv.sh](src/main/docker/files/setenv.sh) (during environment build process file gets copied to TOMCAT_HOME/bin directory)
 
-Stack
-* tomcat v8
-* java v8
-* maven v3x
-* docker v1.9
-* docker-compose v1.5
+| **Property** | **Description** |
+| ------------- | ------------- |
+| db.host | database host / ip address |
+| db.port | database port |
+| db.username | database username |
+| db.password | database password |
 
-## Prerequisites
+#### Prerequisites
 * `$ docker run --name nexus --restart=always -d -p 172.17.0.1:8081:8081 casadocker/nexus:2.12.0-01`
 
-## Integration tests
+#### Integration tests
 * `$ mvn clean verify -Pcd -Dmaven.buildNumber.doCheck=false`
