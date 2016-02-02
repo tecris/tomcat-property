@@ -15,7 +15,7 @@ https://tomcat.apache.org/tomcat-8.0-doc/config/
 
 #### Properties
  - Defined in [context.xml](src/main/webapp/META-INF/context.xml)
- - Supplied in [setenv.sh](src/main/docker/files/setenv.sh)
+ - Supplied in [setenv.sh](src/main/docker/files/setenv.sh) (during environment build process file gets copied to TOMCAT_HOME/bin directory)
 
 | **Property** | **Description** |
 | ------------- | ------------- |
