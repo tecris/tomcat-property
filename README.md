@@ -3,7 +3,9 @@ Sample project to demonstrate property replacement in tomcat.
 
 https://tomcat.apache.org/tomcat-8.0-doc/config/
 
-Properties
+#### Properties
+ - Defined in [context.xml](src/main/webapp/META-INF/context.xml)
+ - Supplied in [setenv.sh](src/main/docker/files/setenv.sh)
 
 | **Property** | **Description** |
 | ------------- | ------------- |
@@ -20,8 +22,8 @@ Stack
 * docker v1.9
 * docker-compose v1.5
 
-## Prerequisites
+#### Prerequisites
 * `$ docker run --name nexus --restart=always -d -p 172.17.0.1:8081:8081 casadocker/nexus:2.12.0-01`
 
-## Integration tests
+#### Integration tests
 * `$ mvn clean verify -Pcd -Dmaven.buildNumber.doCheck=false`
