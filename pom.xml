@@ -45,13 +45,11 @@
   </properties>
 
   <dependencies>
-    <!-- JAX-RS -->
     <dependency>
       <groupId>javax.ws.rs</groupId>
       <artifactId>javax.ws.rs-api</artifactId>
       <version>${jaxrs.version}</version>
     </dependency>
-    <!-- Jersey 2.19 -->
     <dependency>
       <groupId>org.glassfish.jersey.containers</groupId>
       <artifactId>jersey-container-servlet</artifactId>
