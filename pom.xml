@@ -33,7 +33,7 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <mysql-connector.version>5.1.38</mysql-connector.version>
-    <jayway-restassured.version>2.7.0</jayway-restassured.version>
+    <jayway-restassured.version>2.8.0</jayway-restassured.version>
     <junit.version>4.12</junit.version>
     <hamcrest.version>1.3</hamcrest.version>
     <mysql.root.password>mysql</mysql.root.password>
@@ -70,7 +70,7 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-entitymanager</artifactId>
-      <version>5.0.7.Final</version>
+      <version>5.1.0.Final</version>
     </dependency>
     <dependency>
       <groupId>javax.transaction</groupId>
@@ -85,7 +85,7 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.7.0</version>
+      <version>2.7.1-1</version>
     </dependency>
     <dependency>
       <groupId>org.glassfish.jersey.media</groupId>
