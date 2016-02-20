@@ -11,7 +11,6 @@ https://tomcat.apache.org/tomcat-8.0-doc/config/
 | Java | 8 |
 | Maven | 3.3 |
 | Docker | 1.9 |
-| Docker Compose | 1.5.2 |
 
 #### Properties
  - Defined in [context.xml](src/main/webapp/META-INF/context.xml)
