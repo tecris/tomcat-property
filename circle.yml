@@ -6,4 +6,4 @@ machine:
 
 test:
   override:
-    - mvn verify -Pcd
+    - mvn verify -Pcd -Dmysql.port=3307
