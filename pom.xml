@@ -38,6 +38,7 @@
     <hamcrest.version>1.3</hamcrest.version>
     <mysql.root.password>mysql</mysql.root.password>
     <database.name>bookstoredb</database.name>
+    <mysql.port>3306</mysql.port>
     <mysql.username>bookstore</mysql.username>
     <mysql.password>1bookstore!</mysql.password>
     <jersey2.version>2.22.1</jersey2.version>
@@ -175,7 +176,7 @@
                       <MYSQL_PASSWORD>${mysql.password}</MYSQL_PASSWORD>
                     </env>
                     <ports>
-                      <port>3306:3306</port>
+                      <port>${mysql.port}:3306</port>
                     </ports>
                     <wait>
                       <time>10000</time>
@@ -234,7 +235,7 @@
             <artifactId>flyway-maven-plugin</artifactId>
             <version>3.2.1</version>
             <configuration>
-              <url>jdbc:mysql://localhost:3306/${database.name}</url>
+              <url>jdbc:mysql://localhost:${mysql.port}/${database.name}</url>
               <user>root</user>
               <password>${mysql.root.password}</password>
             </configuration>
