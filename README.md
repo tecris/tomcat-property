@@ -1,6 +1,7 @@
 # Property replacement in tomcat
 
 [![Circle CI](https://circleci.com/gh/tecris/tomcat-property.svg?style=svg)](https://circleci.com/gh/tecris/tomcat-property)
+[![Build Status](https://travis-ci.org/tecris/tomcat-property.svg?branch=master)](https://travis-ci.org/tecris/tomcat-property)
 
 Sample project to demonstrate property replacement in tomcat.
 
