@@ -1,4 +1,7 @@
 # Property replacement in tomcat
+
+[![Circle CI](https://circleci.com/gh/tecris/tomcat-property.svg?style=svg)](https://circleci.com/gh/tecris/tomcat-property)
+
 Sample project to demonstrate property replacement in tomcat.
 
 https://tomcat.apache.org/tomcat-8.0-doc/config/
