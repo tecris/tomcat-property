@@ -16,8 +16,8 @@ test:
   pre:
     - sudo service mysql stop                                # stop circleci mysql instance to avoid port clash
     - docker-compose up -d
-    - mvn -Pdeploy-db-schema clean compile flyway:migrate
+    - mvn clean compile flyway:migrate
     - mvn clean package
     - curl --user admin:1admin! --upload-file target/tomcat-pr.war "http://localhost:8080/manager/text/deploy?path=/tomcat-pr&update=true"
   override:
-    - mvn -Pintegration-test verify
+    - mvn integration-test

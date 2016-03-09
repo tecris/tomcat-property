@@ -33,8 +33,8 @@ before_install:
   - /usr/local/maven/bin/mvn -version
 
 script:
-  - docker-compose up -d                                                         # start web(tomcat) and database(mysql) containers`
-  - /usr/local/maven/bin/mvn -Pdeploy-db-schema clean compile flyway:migrate     # deploy database schema
-  - /usr/local/maven/bin/mvn clean package                                       # package application
+  - docker-compose up -d                                      # start web(tomcat) and database(mysql) containers`
+  - /usr/local/maven/bin/mvn clean compile flyway:migrate     # deploy database schema
+  - /usr/local/maven/bin/mvn clean package                    # package application
   - curl --user admin:1admin! --upload-file target/tomcat-pr.war "http://localhost:8080/manager/text/deploy?path=/tomcat-pr&update=true"
-  - /usr/local/maven/bin/mvn clean -Pintegration-test verify                     # run E2E tests
+  - /usr/local/maven/bin/mvn clean integration-test           # run E2E tests
