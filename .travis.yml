@@ -1,18 +1,40 @@
 sudo: required
 
+env:
+  global:
+    - DOCKER_VERSION=1.10.2-0~trusty
+    - DOCKER_COMPOSE_VERSION=1.6.2
+
 services:
   - docker
 
 jdk:
   - oraclejdk8
-  
+
 cache:
   directories:
   - $HOME/.m2
-  
+
 before_install:
+  # list docker-engine versions
+  - apt-cache madison docker-engine
+
+  # upgrade docker-engine to specific version
+  - sudo apt-get -o Dpkg::Options::="--force-confnew" install -y docker-engine=${DOCKER_VERSION}
+
+  # reinstall docker-compose at specific version
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
   - "wget http://apache.mirror.iphh.net/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz && tar xfz apache-maven-3.3.9-bin.tar.gz && sudo mv apache-maven-3.3.9 /usr/local/maven-3.3.9 && sudo rm -f /usr/local/maven && sudo ln -s /usr/local/maven-3.3.9 /usr/local/maven"
+  - docker version
+  - docker-compose version
+  - /usr/local/maven/bin/mvn -version
 
 script:
-  - /usr/local/maven/bin/mvn -version
-  - /usr/local/maven/bin/mvn clean verify -Pcd
+  - docker-compose up -d                                                         # start web(tomcat) and database(mysql) containers`
+  - /usr/local/maven/bin/mvn -Pdeploy-db-schema clean compile flyway:migrate     # deploy database schema
+  - /usr/local/maven/bin/mvn clean package                                       # package application
+  - curl --user admin:1admin! --upload-file target/tomcat-pr.war "http://localhost:8080/manager/text/deploy?path=/tomcat-pr&update=true"
+  - /usr/local/maven/bin/mvn clean -Pintegration-test verify                     # run E2E tests
