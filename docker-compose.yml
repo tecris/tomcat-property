@@ -1,0 +1,25 @@
+version: '2'
+services:
+  db:
+    image: mysql:5.7
+    hostname: bruk.db
+    container_name: bruk-demo-db
+    stdin_open: true
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql
+      - MYSQL_USER=bookstore
+      - MYSQL_PASSWORD=1bookstore!
+      - MYSQL_DATABASE=bookstoredb
+
+  web:
+    build: ./docker
+    image: bruk-web
+    hostname: bruk.web
+    container_name: bruk-demo-web
+    stdin_open: true
+    tty: true
+    ports:
+      - "8080:8080"

@@ -27,5 +27,11 @@ https://tomcat.apache.org/tomcat-8.0-doc/config/
 | db.username | database username |
 | db.password | database password |
 
-#### One liner
-* `$ mvn clean verify -Pcd -Dmaven.buildNumber.doCheck=false`
+#### How to run E2E tests
+* ```
+   docker-compose up -d
+   mvn -Pdeploy-db-schema clean compile flyway:migrate
+   mvn clean package
+   curl --user admin:1admin! --upload-file target/tomcat-pr.war "http://localhost:8080/manager/text/deploy?path=/tomcat-pr&update=true"
+   mvn -Pintegration-test verify
+  ```
