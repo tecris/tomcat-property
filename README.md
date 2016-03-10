@@ -17,7 +17,7 @@ Sample project to demonstrate property replacement in tomcat.
 
 #### Properties
  - Defined in [context.xml](src/main/webapp/META-INF/context.xml)
- - Supplied in [setenv.sh](src/main/docker/files/setenv.sh) (during environment build process file gets copied to TOMCAT_HOME/bin directory)
+ - Supplied in [setenv.sh](docker/setenv.sh) (during environment build process file gets copied to TOMCAT_HOME/bin directory)
 
 | **Property** | **Description** |
 | ------------- | ------------- |
