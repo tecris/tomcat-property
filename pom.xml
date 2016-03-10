@@ -30,10 +30,11 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <mysql-connector.version>5.1.38</mysql-connector.version>
-    <jayway-restassured.version>2.8.0</jayway-restassured.version>
+    <jayway-restassured.version>2.9.0</jayway-restassured.version>
     <junit.version>4.12</junit.version>
     <hamcrest.version>1.3</hamcrest.version>
     <mysql.root.password>mysql</mysql.root.password>
@@ -41,14 +42,14 @@
     <mysql.port>3306</mysql.port>
     <mysql.username>bookstore</mysql.username>
     <mysql.password>1bookstore!</mysql.password>
-    <jersey2.version>2.22.1</jersey2.version>
+    <jersey2.version>2.22.2</jersey2.version>
     <jaxrs.version>2.0.1</jaxrs.version>
     <hibernate.version>5.1.0.Final</hibernate.version>
     <javax.jta.version>1.1</javax.jta.version>
     <javax.servlet.version>4.0.0-b01</javax.servlet.version>
-    <jackson-databind.version>2.7.1-1</jackson-databind.version>
-    <jackson-core.version>2.7.1</jackson-core.version>
-    <jersey-media-moxy>2.22.1</jersey-media-moxy>
+    <jackson-databind.version>2.7.2</jackson-databind.version>
+    <jackson-core.version>2.7.2</jackson-core.version>
+    <jersey-media-moxy>2.22.2</jersey-media-moxy>
   </properties>
 
   <dependencyManagement>
