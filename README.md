@@ -5,7 +5,6 @@
 
 Sample project to demonstrate property replacement in tomcat.
 
-https://tomcat.apache.org/tomcat-8.0-doc/config/
 <hr/>
 
 #### Stack
