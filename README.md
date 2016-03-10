@@ -28,10 +28,11 @@ https://tomcat.apache.org/tomcat-8.0-doc/config/
 | db.password | database password |
 
 #### How to run E2E tests
-* ```
-   docker-compose up -d
-   mvn clean compile flyway:migrate
-   mvn clean package
-   curl --user admin:1admin! --upload-file target/tomcat-pr.war "http://localhost:8080/manager/text/deploy?path=/tomcat-pr&update=true"
-   mvn clean verify
+
+  ```
+    docker-compose up -d
+    mvn clean compile flyway:migrate
+    mvn clean package
+    curl --user admin:1admin! --upload-file target/tomcat-pr.war "http://localhost:8080/manager/text/deploy?path=/tomcat-pr&update=true"
+    mvn clean verify
   ```
