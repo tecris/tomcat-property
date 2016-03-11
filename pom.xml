@@ -49,7 +49,6 @@
     <jersey2.version>2.22.2</jersey2.version>
     <jaxrs.version>2.0.1</jaxrs.version>
     <hibernate.version>5.1.0.Final</hibernate.version>
-    <javax.jta.version>1.1</javax.jta.version>
     <javax.servlet.version>4.0.0-b01</javax.servlet.version>
     <jackson-databind.version>2.7.2</jackson-databind.version>
     <jackson-core.version>2.7.2</jackson-core.version>
@@ -82,11 +81,6 @@
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-entitymanager</artifactId>
         <version>${hibernate.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>javax.transaction</groupId>
-        <artifactId>jta</artifactId>
-        <version>${javax.jta.version}</version>
       </dependency>
       <dependency>
         <groupId>javax.servlet</groupId>
@@ -153,10 +147,6 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-entitymanager</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>javax.transaction</groupId>
-      <artifactId>jta</artifactId>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
