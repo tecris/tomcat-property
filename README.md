@@ -5,6 +5,8 @@
 
 Sample project to demonstrate property replacement in tomcat.
 
+Possible usage: externalize environment variables.
+
 <hr/>
 
 #### Stack
