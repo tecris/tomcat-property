@@ -49,6 +49,7 @@
     <jersey2.version>2.22.2</jersey2.version>
     <jaxrs.version>2.0.1</jaxrs.version>
     <hibernate.version>5.1.0.Final</hibernate.version>
+    <hibernate-jpa-api.version>1.0.0.Final</hibernate-jpa-api.version>
     <javax.servlet.version>4.0.0-b01</javax.servlet.version>
     <jackson-databind.version>2.7.2</jackson-databind.version>
     <jackson-core.version>2.7.2</jackson-core.version>
@@ -66,11 +67,18 @@
         <groupId>org.glassfish.jersey.containers</groupId>
         <artifactId>jersey-container-servlet</artifactId>
         <version>${jersey2.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate.javax.persistence</groupId>
+        <artifactId>hibernate-jpa-2.1-api</artifactId>
+        <version>${hibernate-jpa-api.version}</version>
       </dependency>
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-entitymanager</artifactId>
         <version>${hibernate.version}</version>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>javax.servlet</groupId>
@@ -96,6 +104,7 @@
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
         <version>${mysql-connector.version}</version>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>junit</groupId>
@@ -125,6 +134,10 @@
     <dependency>
       <groupId>org.glassfish.jersey.containers</groupId>
       <artifactId>jersey-container-servlet</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.javax.persistence</groupId>
+      <artifactId>hibernate-jpa-2.1-api</artifactId>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
