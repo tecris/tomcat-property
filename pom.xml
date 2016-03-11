@@ -9,6 +9,10 @@
 
   <name>Tomcat property replacement demo </name>
 
+  <prerequisites>
+    <maven>3.0</maven>
+  </prerequisites>
+
   <scm>
     <url>https://github.com/tecris/tomcat-property.git</url>
     <connection>scm:git:git://github.com/tecris/tomcat-property.git</connection>
@@ -194,7 +198,7 @@
       <plugin>
         <groupId>org.flywaydb</groupId>
         <artifactId>flyway-maven-plugin</artifactId>
-        <version>3.2.1</version>
+        <version>4.0</version>
         <configuration>
           <url>jdbc:mysql://localhost:${mysql.port}/${database.name}</url>
           <user>${mysql.username}</user>
