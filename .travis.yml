@@ -36,7 +36,7 @@ before_install:
 
 script:
   - docker-compose up -d                                      # start web(tomcat) and database(mysql) containers`
-  - sleep 5                                                   # give db time to start
+  - sleep 10                                                  # give db time to start
   - /usr/local/maven/bin/mvn clean compile flyway:migrate     # deploy database schema
   - /usr/local/maven/bin/mvn clean package                    # package application
   - curl --user admin:1admin! --upload-file target/tomcat-pr.war "http://localhost:8080/manager/text/deploy?path=/tomcat-pr&update=true"
