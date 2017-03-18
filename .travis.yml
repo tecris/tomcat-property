@@ -33,6 +33,7 @@ before_install:
   - docker version
   - docker-compose version
   - /usr/local/maven/bin/mvn -version
+  - sudo service mysql stop       
 
 script:
   - docker-compose up -d                                      # start web(tomcat) and database(mysql) containers`
