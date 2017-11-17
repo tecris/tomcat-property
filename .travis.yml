@@ -15,9 +15,9 @@ before_install:
   - sudo service mysql stop       
 
 script:
-  - docker-compose up -d                                      # start web(tomcat) and database(mysql) containers`
-  - sleep 10                                                  # give db time to start
-  - /usr/local/maven/bin/mvn clean compile flyway:migrate     # deploy database schema
-  - /usr/local/maven/bin/mvn clean package                    # package application
-  - curl --user admin:1admin! --upload-file target/tomcat-pr.war "http://localhost:8080/manager/text/deploy?path=/tomcat-pr&update=true"
-  - /usr/local/maven/bin/mvn clean integration-test           # run E2E tests
+  - mvn clean package                    # package application
+  - cp target/tomcat-pr.war docker/
+  - docker-compose up -d                 # start web(tomcat) and database(mysql) containers`
+  - sleep 10                             # give db time to start
+  - mvn clean compile flyway:migrate     # deploy database schema
+  - mvn clean integration-test           # run E2E tests
