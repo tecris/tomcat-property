@@ -11,9 +11,9 @@ Sample project to demonstrate variable substitution (aka property replacement) i
 #### Stack
 | **Technology** | **Version** |
 | ------------- | ------------- |
-| Tomcat | 8 |
+| Tomcat | 8.5 |
 | Java | 8 |
-| Maven | 3.3 |
+| Maven | 3.5 |
 | Docker | 1.10 |
 
 #### Properties
@@ -30,9 +30,8 @@ Sample project to demonstrate variable substitution (aka property replacement) i
 #### How to run E2E tests
 
   ```
+    $ mvn clean package
     $ docker-compose up -d
     $ mvn clean compile flyway:migrate
-    $ mvn clean package
-    $ curl --user admin:1admin! --upload-file target/tomcat-pr.war "http://localhost:8080/manager/text/deploy?path=/tomcat-pr&update=true"
     $ mvn clean verify
   ```

@@ -14,10 +14,11 @@ dependencies:
 
 test:
   pre:
-    - sudo service mysql stop                                # stop circleci mysql instance to avoid port clash
+    - sudo service mysql stop              # stop circleci mysql instance to avoid port clash
     - mvn clean package
     - cp target/tomcat-pr.war docker/
     - docker-compose up -d
+    - sleep 10                             # give db time to start
     - mvn clean compile flyway:migrate
   override:
     - mvn integration-test
