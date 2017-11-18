@@ -18,12 +18,14 @@ jobs:
           name: Install Docker Compose
           command: |
             set -x
-             curl -L https://github.com/docker/compose/releases/download/1.17.1/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
-             chmod +x ~/docker-compose
-             sudo mv ~/docker-compose /usr/local/bin/docker-compose
-             docker-compose version
+            VER="1.17.1"
+            curl -L https://github.com/docker/compose/releases/download/$VER/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
+            chmod +x ~/docker-compose
+            sudo mv ~/docker-compose /usr/local/bin/docker-compose
+            docker-compose version
 
       - setup_remote_docker
+
       - run:
         - name: start stack
         - command: docker-compose up -d --build
