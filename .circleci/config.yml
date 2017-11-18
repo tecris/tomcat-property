@@ -12,10 +12,6 @@ jobs:
           command: mvn clean package
 
       - run:
-          name: stop circleci mysql instance to avoid port clash
-          command: sudo service mysql stop
-
-      - run:
           name: Copy jar
           command: cp target/tomcat-pr.war docker/
 
