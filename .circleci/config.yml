@@ -36,6 +36,13 @@ jobs:
           name: wait for db to start
           command: sleep 10
 
+
+      - run:
+          name: show stack
+          command: |
+            set -x
+            docker-compose ps
+
       - run:
           name: apply db scripts
           command: mvn clean compile flyway:migrate
