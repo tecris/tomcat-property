@@ -26,6 +26,10 @@ jobs:
 
       - setup_remote_docker
 
+      - run:
+        - name: start stack
+        - command: docker-compose up -d
+
 # dependencies:
 # pre:
 # - sudo pip install docker-compose
