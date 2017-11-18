@@ -32,6 +32,19 @@ jobs:
             set -x
             docker-compose up -d
 
+      - run:
+          name: wait for db to start
+          command: sleep 10
+
+      - run:
+          name: apply db scripts
+          command: mvn clean compile flyway:migrate
+
+      - run:
+          name: run tests
+          command: mvn integration-test
+
+
 # dependencies:
 # pre:
 # - sudo pip install docker-compose
