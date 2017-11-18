@@ -28,7 +28,9 @@ jobs:
 
       - run:
         - name: start stack
-        - command: docker-compose up -d
+         command: |
+            set -x
+            docker-compose up -d --build
 
 # dependencies:
 # pre:
