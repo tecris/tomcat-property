@@ -3,9 +3,13 @@ jobs:
   build:
     docker:
       - image: circleci/openjdk:8
+
     steps:
       - checkout
-      - run: mvn clean package
+      - run:
+          name: Build application
+          command: mvn clean package
+
       - run:
           name: Install Docker Compose
           command: |
@@ -19,8 +23,8 @@ jobs:
 # - docker version
 # - docker-compose version
 
-test:
-  pre:
+#test:
+#  pre:
 # - sudo service mysql stop              # stop circleci mysql instance to avoid port clash
 # - mvn clean package
 # - cp target/tomcat-pr.war docker/
