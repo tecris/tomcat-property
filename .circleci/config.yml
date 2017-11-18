@@ -27,8 +27,8 @@ jobs:
       - setup_remote_docker
 
       - run:
-        - name: start stack
-         command: |
+          name: start stack
+          command: |
             set -x
             docker-compose up -d
 
