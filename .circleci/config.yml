@@ -5,7 +5,7 @@ jobs:
       - image: circleci/openjdk:8
     steps:
       - checkout 
-      - mvn clean package
+      - run: mvn clean package
 
 # dependencies:
 # pre:
