@@ -24,8 +24,6 @@ jobs:
             sudo mv ~/docker-compose /usr/local/bin/docker-compose
             docker-compose version
 
-      - setup_remote_docker
-
       - run:
         - name: start stack
         - command: docker-compose up -d --build
