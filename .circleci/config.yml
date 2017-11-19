@@ -1,8 +1,8 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/openjdk:8
+    machine:
+      - image: circleci/classic
 
     steps:
       - checkout
