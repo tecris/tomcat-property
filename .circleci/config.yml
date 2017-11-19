@@ -24,16 +24,14 @@ jobs:
             chmod +x ~/docker-compose
             sudo mv ~/docker-compose /usr/local/bin/docker-compose
             docker-compose version
+            docker version
 
       - run:
           name: start stack
           command: |
             set -x
             docker-compose up -d
-
-      - run:
-          name: wait for db to start
-          command: sleep 10
+            sleep 10
 
       - run:
           name: show stack
