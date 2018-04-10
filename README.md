@@ -11,7 +11,7 @@ Sample project to demonstrate variable substitution (aka property replacement) i
 #### Stack
 | **Technology** | **Version** |
 | ------------- | ------------- |
-| Tomcat | 8.5 |
+| Tomcat | 9.0 |
 | Java | 8 |
 | Maven | 3.5 |
 | Docker | 1.10 |
